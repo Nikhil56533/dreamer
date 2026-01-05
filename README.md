@@ -168,6 +168,7 @@ export default function FinancialQuizGame() {
   // Handle timeout
   useEffect(() => {
     if (timeoutReached && !showExplanation) {
+      debugger;
       setStrikes(prev => prev + 1);
       setShowExplanation(true);
     }
@@ -175,6 +176,7 @@ export default function FinancialQuizGame() {
 
   const handleAnswerClick = (index: number) => {
     if (showExplanation || timeoutReached) return;
+    debugger;
     setSelectedAnswer(index);
     
     const isCorrect = index === questions[currentQuestion].correctAnswer;
